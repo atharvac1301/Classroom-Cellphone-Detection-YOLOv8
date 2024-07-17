@@ -31,9 +31,15 @@ We utilized YOLOv8s (small), YOLOv8m (medium), YOLOv8l (large) models for this t
 
 - **Model:** YOLOv8m (medium)
 - **Epochs:** 55
-- **Batch Size:** 64
-- **Optimizer:** Adam
-- **Learning Rate:** 0.001
+- **Batch Size:** 16 (default autobatch)
+- **Optimizer:** Adam (default)
+- **Image Size:** 640
+- **Learning Rate:** 0.001 (adaptive)
+
+### Training Graphs
+![](Results/Model-Prediction-Results/classroom_mapping.jpeg)
+
+*Figure 3: Training graphs of YOLOv8m (55 epochs).*
 
 ## Prediction Results
 
