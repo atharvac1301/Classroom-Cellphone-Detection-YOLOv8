@@ -47,7 +47,7 @@ After training, the model was evaluated on the validation set. The performance m
 
 ### Prediction Image
 
-![](Results\Model-Prediction-Results)
+![](Results/Model-Prediction-Results/prediction.jpg)
 
 *Figure 4: A prediction by the YOLOv8m (55 epochs) model showing detected cellphones in a classroom.*
 
@@ -71,13 +71,9 @@ The YOLOv8m model demonstrates promising results in detecting cellphones in clas
 
 ## References
 
-- YOLOv8 Documentation: [YOLOv8](https://github.com/ultralytics/yolov8)
+- YOLOv8 Documentation: [YOLOv8](https://github.com/ultralytics/ultralytics)
 - Dataset Source: Custom Classroom Cellphone Dataset
 
 ## Acknowledgements
 
-We would like to thank the contributors and maintainers of the YOLOv8 project for their continuous support and development of the model.
-
----
-
-*Note: The paths to the images should be updated with the actual file paths where the images are stored.*
+I would like to thank [Roboflow](https://roboflow.com/) for making our job of data annotation, dataset creation easier and also helping with cloud storage for trained models and their inferencing used in the project.
