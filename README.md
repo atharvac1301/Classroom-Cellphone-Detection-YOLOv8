@@ -12,11 +12,16 @@ The dataset comprises images captured in various real-life classroom scenarios f
 ### Table Dataset
 This dataset comprised of 212 frames of empty classroom with no activity and presence of students or professors. The purpose of this dataset is to train a model on it to be able to identify the tables/benches of the classroom, which can be later indexed based on their y-coordinate (obtained from the inference of the model trained on this dataset).
 
-### Annotated Image from the Dataset
+### Annotated Images from the Dataset
 
-![Annotated Image](path/to/image1.png)
+![](Results/Model-Prediction-Results/Actual-Annotation.png)
 
-*Figure 1: An example of an annotated image from the dataset showing cellphones in a classroom.*
+*Figure 1: An annotated image of empty classroom to map out the tables.*
+
+![](Results/Model-Prediction-Results/Actual-Annotation.png)
+
+*Figure 2: An annotated image of classroom with students and their cellphones.*
+
 
 ## Model Training
 
