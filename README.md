@@ -25,7 +25,7 @@ This dataset comprised of 212 frames of empty classroom with no activity and pre
 
 ## Model Training
 
-We utilized YOLOv8s (small), YOLOv8m (medium), YOLOv8l (large) models for this task. The models were trained for a certain number of epochs and where later fine tuned by change the epochs and observing positive/negative changes in the training and validation loss graphs. The best performing model was YOLOv8m trained for 55 epochs, optimizing for mAP (which implicitly optimizes both precision and recall).
+We utilized YOLOv8s (small), YOLOv8m (medium), YOLOv8l (large) models for this task. The models were trained for a certain number of epochs and where later fine tuned by change the epochs and observing positive/negative changes in the training and validation loss graphs. The best performing model was YOLOv8m trained for 55 epochs, optimizing for mAP (which implicitly optimizes both precision and recall). It showed an mAP50 of 89.5%.
 
 ### Training Configuration
 
@@ -37,7 +37,7 @@ We utilized YOLOv8s (small), YOLOv8m (medium), YOLOv8l (large) models for this t
 - **Learning Rate:** 0.001 (adaptive)
 
 ### Training Graphs
-![](Results/Model-Prediction-Results/classroom_mapping.jpeg)
+![](Results/YOLOv8m-results/v8m-4th-version/results.png)
 
 *Figure 3: Training graphs of YOLOv8m (55 epochs).*
 
@@ -47,28 +47,27 @@ After training, the model was evaluated on the validation set. The performance m
 
 ### Prediction Image
 
-![Prediction Image](path/to/image2.png)
+![](Results\Model-Prediction-Results)
 
-*Figure 2: An example prediction by the YOLOv8m model showing detected cellphones in a classroom.*
+*Figure 4: A prediction by the YOLOv8m (55 epochs) model showing detected cellphones in a classroom.*
 
 ## Results
 
 The results table below summarizes the performance of the YOLOv8m model across various evaluation metrics.
 
-| Metric        | Precision | Recall  | F1 Score | mAP@0.5 | mAP@0.75 | mAP@0.5:0.95 |
-|---------------|-----------|---------|----------|---------|----------|--------------|
-| Cellphone 1   | 0.85      | 0.80    | 0.82     | 0.88    | 0.75     | 0.78         |
-| Cellphone 2   | 0.87      | 0.82    | 0.84     | 0.90    | 0.78     | 0.81         |
-| Cellphone 3   | 0.83      | 0.78    | 0.80     | 0.86    | 0.73     | 0.76         |
-| Cellphone 4   | 0.89      | 0.84    | 0.86     | 0.92    | 0.80     | 0.83         |
-| Cellphone 5   | 0.86      | 0.81    | 0.83     | 0.89    | 0.77     | 0.80         |
-| Average       | 0.86      | 0.81    | 0.83     | 0.89    | 0.77     | 0.80         |
+| Epochs | Time (in hrs) | Precision | Recall | mAP50 | mAP50-95 |
+|--------|---------------|-----------|--------|-------|----------|
+| 30     | 0.113         | 0.857     | 0.782  | 0.864 | 0.552    |
+| 45     | 0.171         | 0.843     | 0.809  | 0.873 | 0.568    |
+| 50     | 0.188         | 0.842     | 0.775  | 0.873 | 0.563    |
+| **55** | **0.202**     | **0.844** | **0.835**  | **0.895** | **0.581**    |
+| 60     | 0.236         | 0.842     | 0.793  | 0.880 | 0.581    |
 
-*Table 1: Performance metrics of the YOLOv8m model for cellphone detection in a classroom setting.*
+*Table 1: YOLOv8m Training Results.*
 
 ## Conclusion
 
-The YOLOv8m model demonstrates promising results in detecting cellphones in classroom environments. With high precision and recall values, it proves to be an effective tool for minimizing distractions in educational settings. Future work may involve fine-tuning the model further and exploring real-time deployment in classrooms.
+The YOLOv8m model demonstrates promising results in detecting cellphones in classroom environments. With high mAP values, it proves to be an effective tool for minimizing distractions in educational settings. Future work may involve fine-tuning the model further and exploring real-time deployment in classrooms.
 
 ## References
 
