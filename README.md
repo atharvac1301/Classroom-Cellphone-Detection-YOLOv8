@@ -16,22 +16,22 @@ This dataset comprised of 212 frames of empty classroom with no activity and pre
 
 ![](Results/Model-Prediction-Results/Actual-Annotation.png)
 
-*Figure 1: An annotated image of empty classroom to map out the tables.*
+*Figure 1: An annotated image of classroom with students and their cellphones.*
 
-![](Results/Model-Prediction-Results/Actual-Annotation.png)
+![](Results/Model-Prediction-Results/classroom_mapping.jpeg)
 
-*Figure 2: An annotated image of classroom with students and their cellphones.*
+*Figure 2: An annotated image of empty classroom to map out the tables.*
 
 
 ## Model Training
 
-We utilized YOLOv8m (medium) for this task. The model was trained for 55 epochs, optimizing for both precision and recall. Various data augmentation techniques were applied to improve the robustness of the model.
+We utilized YOLOv8s (small), YOLOv8m (medium), YOLOv8l (large) models for this task. The models were trained for a certain number of epochs and where later fine tuned by change the epochs and observing positive/negative changes in the training and validation loss graphs. The best performing model was YOLOv8m trained for 55 epochs, optimizing for mAP (which implicitly optimizes both precision and recall).
 
 ### Training Configuration
 
 - **Model:** YOLOv8m (medium)
 - **Epochs:** 55
-- **Batch Size:** 16
+- **Batch Size:** 64
 - **Optimizer:** Adam
 - **Learning Rate:** 0.001
 
